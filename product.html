@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>chaika_tatts</title>
+
+<!--		Фавикон:-->
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap reboot (для сброса стилей) -->
+<!-- 	<link rel="stylesheet" href="libs/bootstrap-reboot.min.css"> -->
+
+	<!-- Bootstrap сетка -->
+	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+	<!-- Шрифты с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+	<!-- Стили сайта -->
+	<link rel="stylesheet" href="css/style.css">
+<!-- стили для примерного модального окна -->
+	<style>
+		.form {
+			width: 200px;
+			height: 160px;
+			background-color: gray;
+		}
+		.form input {
+			margin: 5px;
+		}
+	</style>
+<!-- конец стилей для примерного модального окна -->
+
+</head>
+<body>
+	<header class="header">
+				<div class="header_container">
+					<!--контейнер ограничен по ширине -->
+					<div class="header_body">
+						<div class="logo"><a href="index.html" class="header_link"><img class="header_logo" src="img/111.png" alt="logo" ></a></div>
+						<div class="header_burger">
+							<span> </span>
+						</div>
+						<nav class="header_menu">
+							<ul class="header_list">
+								<li><a href="port.html" class="header_link">Портфолио</a></li>
+								<li><a href="info.html" class="header_link">Инфо</a></li>
+								<li><a href="sketches.html" class="header_link">Запись</a></li>
+								<li><a href="shop.html" class="header_link" >Магазин</a></li>
+							</ul>
+						</nav>
+						<div class="header_cart">
+							<a href="" >
+								<img src="img/cart.png"  class="header_cart" alt="cart"></a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Карточка товара  -->
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="product">
+					<div class="image">
+						<img src="img/iworked.JPG" width="500" height="300" alt="alt">
+					</div>
+					<div class="info"> 
+                        <h2>Название товара</h2>
+                		<div class="info-price">
+                        		<div class="price"><span >450</span></div>
+                       			<div ><button id="add_to_cart" class="add-to-cart">Добавить в корзину</button></div>
+                       			
+                       			<!-- добавила id для кнопки -->
+                       			
+                       		</div>
+                       		<div class="desc">
+                       		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a odio deleniti voluptatem velit cum suscipit doloremque vitae, ullam, mollitia rerum tempore soluta quae earum dolore molestiae aliquam sed reprehenderit.</p></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+<!-- примерное модальное окно-форма -->
+	<div id="form" class="form" style="display: none"> 
+		<form class="example" action="">
+			<input type="text" name="Имя" value="">
+            <input type="text" name="Фамилия" value="">
+            <input type="text" name="Отчество" value="">
+            <input type="text" name="Адрес" value="">
+            <button id="close_mod">закрыть</button>
+		</form>
+	</div>
+<!-- конец модального окна -->
+
+		<!-- СОДЕРЖИМОЕ САЙТА -->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<!-- подключение jquery -->
+		<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<footer class="footer">
+				<div><p>Больше в соцсетях!</p></div>
+				<div class="footer_icons">
+					<a href=""></a>
+				</div>
+			</footer>
+		</div>
+		<script src="js/main.js"></script> 
+		<!-- <script type="module" src="main.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!-- Скрипт для свайпера:	-->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- подключение jquery -->
+		<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<!-- подключение скриптов -->
+		<script src="js/scrip.js"></script> 
+
+<!-- скрипт для модального окна -->
+		<script>
+			add_to_cart.addEventListener("click",function(){
+			form.style.display="flex";
+			})
+
+			close_mod.addEventListener("click",function(){
+				form.style.opacity = 0;				
+			})
+		</script>
+<!-- конец скрипта для модального окна -->
+
+</html>
